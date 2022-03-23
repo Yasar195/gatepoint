@@ -1,0 +1,128 @@
+import { FaUserAlt } from 'react-icons/fa';
+
+
+const Login = () => {
+    return(
+        <div className="outer">
+            <div className="login">
+                <div id="avatar">
+                    <FaUserAlt size="2rem" color="#002F87"/>
+                </div>
+                <form>
+                    <div className="input-field">
+                        <input type="text" id="name" required />
+                        <label for="name">Your name</label>
+                    </div>
+                    <div className="input-field">
+                        <input type="password" id="name" required />
+                        <label for="name">Your password</label>
+                    </div>
+                    <div className="input-field">
+                        <input id="input" type="submit"/>
+                    </div>
+                </form>
+                <p>New to gate point? You can sign up <span>here</span></p>
+            </div>
+            <style jsx>{`
+                span{
+                    color: blue;
+                    font-size: 0.9rem;
+                }
+
+                #avatar{
+                    width: 100%;
+                    heigth: 10%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                form{
+                    width: 100%;
+                    height: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                }
+
+                .input-field {
+                    position: relative;
+                }
+                  
+                label {
+                    position: absolute;
+                    top: 0.8rem;
+                    left: 0;
+                    width: 100%;
+                    color: #d3d3d3;
+                    transition: 0.2s all;
+                    cursor: text;
+                    font-size: 0.8rem;
+                }
+                  
+                #name {
+                    width: 100%;
+                    border: 0;
+                    outline: 0;
+                    padding: 0.5rem 0;
+                    border-bottom: 2px solid #d3d3d3;
+                    box-shadow: none;
+                    color: white;
+                  }
+
+                #name:invalid {
+                    outline: 0;
+                }
+                  
+                #name:focus,
+                #name:valid {
+                    border-color: #002F87;
+                }
+                  
+                #name:focus~label,
+                #name:valid~label {
+                    font-size: 0.4rem;
+                    top: -0.3rem;
+                    color: #002F87;
+                }
+
+                #input{
+                    padding: 2%;
+                    border-radius: 1rem;
+                    color: white;
+                    outline: none;
+                    background-color: #002F87;
+                    border: none;
+                    font-size: 0.8rem;
+                }
+
+                p{
+                    font-size: 0.6rem;
+                }
+                  
+                .outer{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .login{
+                    padding: 4%;
+                    width: 80%;
+                    height: 80%;
+                    border-radius: 0.2rem;
+                    color: white;
+                    box-shadow: 3px 3px 30px black;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    border-radius: 0.5rem;j
+                }
+            `}</style>
+        </div>
+    )
+}
+
+export default Login;
