@@ -7,7 +7,7 @@ import QuestionNumber from "../components/QuestionNumber";
 const Test = () => {
 
     const questions = [
-        {question: 'full form of cs', options: ['condom','nothing','i dont know','computer sciences'], ans: 'computer science'},
+        {question: 'full form of cs', options: ['option','nothing','i dont know','computer sciences'], ans: 'computer science'},
         {question: 'this is the second question', options: ['option 1', 'option 2', 'option 3'], ans: 'option 2'},
         {question: 'this is the third question', options: ['option 1', 'option 2', 'option 3', 'option 4'], ans: 'option 2'},
         {question: 'this is the fourth question', options: ['option 1', 'option 2', 'option 3', 'option 4', 'option 5'], ans: 'option 2'},
