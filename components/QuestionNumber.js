@@ -28,7 +28,7 @@ const QuestionNumber = (props) => {
                 .qno{
                     width: 90%;
                     height: 60%;
-                    border: 2px solid white;
+                    box-shadow: 3px 3px 10px black;
                 }
 
                 p{
@@ -42,6 +42,7 @@ const QuestionNumber = (props) => {
                     grid-template-columns: repeat(5, 1fr);
                     column-gap: 1%;
                     overflow: hidden;
+                    padding: 2%;
                 }
 
                 .qsn{
@@ -49,7 +50,7 @@ const QuestionNumber = (props) => {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: white;
+                    background-color: blue;
                 }
 
                 .header{

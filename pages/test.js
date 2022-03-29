@@ -82,7 +82,7 @@ const Test = () => {
                     <h1>{qindex+1}/{questions.length}</h1>
                 </div>
                 <Question question={questions[qindex].question} options={questions[qindex].options}/>
-                <Buttons/>    
+                <Buttons next={handleQindex} index={qindex} limit={questions.length}/>    
             </div>
             <div className="right">
                 <QuestionNumber length={questions.length} indexhandler={handleQindex}/>
@@ -102,12 +102,22 @@ const Test = () => {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
+                    background-color: blue;
+                    border-radius: 15px;
+                }
+
+                .time h1{
+                    background: transparent;
                 }
 
                 .left {
                     padding: 2%;
                     width: 60%;
                     height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
                 }
 
                 .right{
@@ -117,6 +127,22 @@ const Test = () => {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                }
+
+                @media(max-width: 700px){
+                    .page{
+                        flex-direction: column;
+                    }
+
+                    .right{
+                        width: 100%;
+                        height: 40%;
+                    }
+
+                    .left{
+                        width: 100%;
+                        height: 60%;
+                    }
                 }
 
             `}</style>

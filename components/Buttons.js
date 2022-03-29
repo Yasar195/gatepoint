@@ -1,13 +1,19 @@
-const Buttons = () => {
+const Buttons = (props) => {
+
+    const onTrigger = () => {
+        if(props.index < props.limit-1){
+            props.next(props.index + 1)
+        }
+    }
+
     return(
         <div className="btn">
 
             <button>Finish test</button>
-            <button>Next question</button>
+            <button onClick={onTrigger}>Next question</button>
 
             <style jsx>{`
                 .btn{
-                    margin-top: 5%;
                     width: 100%;
                     backgrond-color: red;
                     display: flex;
