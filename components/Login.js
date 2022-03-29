@@ -1,24 +1,40 @@
 import { FaUserAlt } from 'react-icons/fa';
-
+import axios from 'axios';
+import { useEffect } from 'react/cjs/react.production.min';
 
 const Login = () => {
-    return(
+
+    const login = () => {
+        axios({
+            method: 'post',
+            url: 'http://localhost:8000/users/login/',
+            data: {
+                'username': document.getElementById('name').textContent,
+                'password': document.getElementById('psd').textContent
+            }
+        })
+        .then(response => console.log(response))
+        .catch(error => console.log(error))
+    }
+
+
+    return (
         <div className="outer">
             <div className="login">
                 <div id="avatar">
-                    <FaUserAlt size="2rem" color="#002F87"/>
+                    <FaUserAlt size="2rem" color="#002F87" />
                 </div>
-                <form>
+                <form onSubmit={() => login()}>
                     <div className="input-field">
-                        <input type="text" id="name" required />
-                        <label for="name">Your name</label>
+                        <input id="name" type="text" className="name" required />
+                        <label htmlFor="name">Your name</label>
                     </div>
                     <div className="input-field">
-                        <input type="password" id="name" required />
-                        <label for="name">Your password</label>
+                        <input id="psd" type="password" className="name" required />
+                        <label htmlFor="name">Your password</label>
                     </div>
                     <div className="input-field">
-                        <input id="input" type="submit"/>
+                        <input id="input" type="submit" />
                     </div>
                 </form>
                 <p>New to gate point? You can sign up <span>here</span></p>
@@ -60,7 +76,7 @@ const Login = () => {
                     font-size: 0.8rem;
                 }
                   
-                #name {
+                .name {
                     width: 100%;
                     border: 0;
                     outline: 0;
@@ -70,17 +86,17 @@ const Login = () => {
                     color: white;
                   }
 
-                #name:invalid {
+                .name:invalid {
                     outline: 0;
                 }
                   
-                #name:focus,
-                #name:valid {
+                .name:focus,
+                .name:valid {
                     border-color: #002F87;
                 }
                   
-                #name:focus~label,
-                #name:valid~label {
+                .name:focus~label,
+                .name:valid~label {
                     font-size: 0.4rem;
                     top: -0.3rem;
                     color: #002F87;

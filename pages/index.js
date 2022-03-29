@@ -59,7 +59,7 @@ export default function Home() {
 
           .left{
             width: 100%;
-            height: 80%;
+            height: 80%;j
             background-color: red;
           }
         }
